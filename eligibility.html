@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PYSCRIPT -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>ICT10 3Q PROJECT: Eligibility</title>
+    <style>
+    .raleway-<uniquifier> {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    }
+    .navbar {
+        background-color: palevioletred;
+    }
+    .jumbotron {
+    background-color: rgb(247, 174, 186);
+    }
+    .btn {
+        background-color: pink;
+    }
+    .btn:hover {
+        background-color: rgb(251, 160, 175);
+    }
+    body {
+        background-color: rgba(255, 210, 217, 0.606);
+    }
+    </style>
+</head>
+<body>
+<!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <h3 class="text-light p-2">Intramurals SY 25-26</h3>
+
+        <!-- Button for mobile view -->
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="https://amacabago.github.io/GH_ICT10_Q3Project_Macabago_Sittie/index.html">SIGN UP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="https://amacabago.github.io/GH_ICT10_Q3Project_Macabago_Sittie/eligibility.html">TEAM CHECKER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="https://amacabago.github.io/GH_ICT10_Q3Project_Macabago_Sittie/players.html">PLAYERS</a>
+          </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+<!-- Eligibility -->
+    <div class="rounded m-3 p-3 bg-light shadow">
+        <form>
+            <div class="jumbotron jumbotron-fluid"><h2 class="p-2 mb-2 text-light text-center">Eligibility</h2></div>
+            <!-- registration -->
+            <label>Are you done with your registration?</label><br>
+            <input type="radio" name="registration" id="yes" value="Yes_reg"> Yes
+            <input type="radio" name="registration" id="no" value="No_reg"> No
+            <br>
+            <!-- medical clearance -->
+            <label>Do you have the medical clearance from the clinic</label><br>
+            <input type="radio" name="medical" id="yes" value="Yes_med"> Yes
+            <input type="radio" name="medical" id="no" value="No_med"> No
+            <br>
+
+            <hr>
+            <div class="jumbotron jumbotron-fluid"><h3 class="p-2 mb-2 text-light text-center">Team</h3></div>
+            <!-- grade -->
+            <label>Grade</label><br>
+            <select id="grade" class="form-select">
+                <option value="">Select grade</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <!-- section -->
+            <label>Section</label><br>
+            <select id="section" class="form-select">
+                <option value="">Select section</option>
+                <option value="Sapphire">Sapphire</option>
+                <option value="Emerald">Emerald</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Topaz">Topaz</option>
+            </select>
+            <br>
+            <!-- enter -->
+            <input class="btn form-control my-3" type="button" py-click="intrams_qualifications" value="Enter">
+
+            <div id="output"></div>
+        </form>
+    </div>
+
+    <py-script src="eligibility.py"></py-script>
+</body>
+</html>
